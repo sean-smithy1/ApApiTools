@@ -16,7 +16,7 @@ class Artist
   def list
     i=0
     # .first as there should only ever be one due to query above
-    @artists[:taxonomies].first[:root][:taxons].map{ |a| { seq: i+=1, id: a[:id], name: a[:name ] } }
+    @artists[:taxonomies].first[:root][:taxons].map{ |a| { seq: i+=1, id: a[:id], name: a[:name ] } } 
   end
 
 end

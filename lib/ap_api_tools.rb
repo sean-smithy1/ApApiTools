@@ -41,8 +41,9 @@ loop do
   end
   
   print "\nSelect Artist (1..) : "
-  a_select=gets.to_i
-  
+  seq_select=gets.to_i
+  artist_selected=artists.list.find { |a| a[:seq] == seq_select }
+
   puts
   puts "This Artist has this list of artworks"
   puts "-"*38
@@ -50,7 +51,7 @@ loop do
   page=1
   
   loop do
-  artworks=Product.get_products(a_select, page)
+  artworks=Product.get_products(artist_selected[:id], page)
   printf("%-3s %-3s %-20s %3s %-20s \n\n", 'Seq', 'ID', 'Name', "I-ID", "Name")
 
   i=1

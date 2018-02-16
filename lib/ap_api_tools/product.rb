@@ -29,7 +29,7 @@ private
       :accept => "application/json",
       'X-Spree-Token': "#{ApApiTools::API_KEY}"
     )
-    .get("#{ApApiTools::HOST}/products/?q[taxon_ids)=artist_id&page=#{page_no}")
+    .get("#{ApApiTools::HOST}/taxons/products?id=#{artist_id}&page=#{page_no}")
     
     JSON.parse(product_return.body, symbolize_names: true)
   end
