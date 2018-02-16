@@ -1,4 +1,4 @@
-#!/bin/env ruby
+#!usr/bin/env ruby
 require_relative "ap_api_tools/version"
 require_relative 'ap_api_tools/utils'
 require_relative 'ap_api_tools/product'
